@@ -30,6 +30,20 @@ target_y = random.randint(0, SCREEN_HEIGHT - target_height)
 #Зададим рандомное значение заливки фона
 color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 
+#Дополнительный функционал
+# Скорость движения цели
+target_speed_x = random.choice([-5, 5])
+target_speed_y = random.choice([-5, 5])
+
+# Переменные для подсчета очков и времени игры
+score = 0
+start_time = time.time()
+game_duration = 30  # Игра длится 30 секунд
+
+# Шрифт для отображения очков и таймера
+font = pygame.font.Font(None, 36)
+
+
 #Цикл
 running = True
 
